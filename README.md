@@ -98,9 +98,23 @@ ALTER USER postgres WITH PASSWORD 'MyNewSecurePassword';
 ## pgAdmin Windows installation and Configuration
 1. Download and install pgAdmin 4 latest stable version.
 
-2. Get wsl ubuntu password
+2. Get wsl ubuntu ip address
 ```bash
 ip addr show eth0
+
+# in below case use 172.28.82.113 as ip address
+# inet 172.28.82.113/20
 ```
 
-3. Set configurations
+3. Set configurations </br>
+3.1. In the **Explorer** go to **Servers** and in **Quick Links** click **Add New Server** </br>
+3.2. In **General** tab give a name to the server </br>
+3.3. In **Connection** tab enter the following
+- Host name/address: [ip address of wsl]
+- Port: 5432
+- Maintenance database: postgres
+- Username: postgres
+- Password: [password of above user]
+
+## Reference
+1. [postgresql.org](https://www.postgresql.org/)
