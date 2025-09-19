@@ -3,13 +3,14 @@
 ## PostgresSQL Installation and Set-up for External Access
 1. Remove any existing installations
 ```bash
-sudo apt-get remove postgresql
+sudo apt-get remove postgresql postgresql-contrib
 ```
 
 2. Install
 ```bash
 sudo apt-get update
-sudo apt-get install postgresql
+sudo apt-get install postgresql postgresql-contrib
+sudo systemctl status postgresql
 ```
 
 3. Set password to postgres user
