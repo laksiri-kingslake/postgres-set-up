@@ -11,6 +11,7 @@ sudo apt-get remove postgresql postgresql-contrib
 sudo apt-get update
 sudo apt-get install postgresql postgresql-contrib
 sudo systemctl status postgresql
+psql --version
 ```
 
 3. Set password to postgres user
@@ -116,6 +117,29 @@ ip addr show eth0
 - Maintenance database: postgres
 - Username: postgres
 - Password: [password of above user]
+
+## psql for database, tables and data
+
+1. List available databases
+```bash
+psql -U postgres -h localhost -W
+```
+```sql
+\l
+```
+
+2. List available tables and show data
+```bash
+# psql -U your_username -d your_database_name
+psql -U postgres -d iceberg_catalog -h localhost -W
+```
+```sql
+\dt
+
+-- show data
+select * from guest_queries;
+
+```
 
 ## Reference
 1. [postgresql.org](https://www.postgresql.org/)
