@@ -1,6 +1,6 @@
 # PostgreSQL Setup and Configuration in WSL
 
-## PostgresSQL Installation and Set-up for External Access
+## PostgreSQL Installation and Set-up for External Access
 1. Remove any existing installations
 ```bash
 sudo apt-get remove postgresql postgresql-contrib
@@ -112,7 +112,7 @@ psql -h <server-ip> -p 5432 -U kauser -d ka_db
 ## pgAdmin Windows installation and Configuration
 1. Download and install pgAdmin 4 latest stable version.
 
-2. Get wsl ubuntu ip address
+2. Get wsl ubuntu ip address - Only for wsl postgres servers
 ```bash
 ip addr show eth0
 
@@ -130,7 +130,7 @@ ip addr show eth0
 - Username: postgres
 - Password: [password of above user]
 
-## psql for database, tables and data
+## psql for Database, Tables and Data
 
 1. List available databases
 ```bash
